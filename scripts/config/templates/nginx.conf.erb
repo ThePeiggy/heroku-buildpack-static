@@ -50,7 +50,7 @@ http {
     resolver <%= resolver %>;
   <% end %>
 
-  <% if basic_auth %>
+  <% if basic_auth && basic_auth_username %>
     auth_basic "Restricted";
     auth_basic_user_file <%= basic_auth_htpasswd_path %>;
   <% end %>
